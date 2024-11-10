@@ -3,7 +3,7 @@ The goal of this side project is to create and train a model to estimate the loc
 These landmarks can be used for head pose estimation, sentiment analysis, action recognition, face filtering and more.
 
 ## Dataset
-As dataset, I choose the Wider Facial Landmarks in-the-wild ([WFLW](https://wywu.github.io/projects/LAB/WFLW.html))[^1] from Wayne Wu et al., containing a total of 10000 annotated faces (7500 for training and 2500 for testing).
+As dataset, I chose the Wider Facial Landmarks in-the-wild ([WFLW](https://wywu.github.io/projects/LAB/WFLW.html))[^1] from Wayne Wu et al., containing a total of 10000 annotated faces (7500 for training and 2500 for testing).
 The following figure shows where the landmarks are located:
 ![wflw-dataset](https://wywu.github.io/projects/LAB/support/WFLW_annotation.png)
 
@@ -25,12 +25,11 @@ Then, based on results and future developments, other approaches may be taken in
 ### First Version
 The first version is a standard CNN architecture using ResNet50[^2] as backbone. 
 The last layer of the ResNet has been changed to produce a 196 dimensional output tensor, i.e. 
-$ x,y $ for each one of the 98 markers.
+_x,y_ for each one of the 98 markers.
 The model has been trained for 200 epochs using Wing loss[^3].
 
 Model 1 outputs on test set elements:
 ![model1-test](plots/model-1-test.jpg)
-
 
 The following plot contains training loss (blue) and validation loss (red):
 ![model1-loss](plots/model-1-train-val-loss.svg)
