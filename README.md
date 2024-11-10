@@ -28,6 +28,10 @@ The last layer of the ResNet has been changed to produce a 196 dimensional outpu
 $ x,y $ for each one of the 98 markers.
 The model has been trained for 200 epochs using Wing loss[^3].
 
+Model 1 outputs on test set elements:
+![model1-test](plots/model-1-test.jpg)
+
+
 The following plot contains training loss (blue) and validation loss (red):
 ![model1-loss](plots/model-1-train-val-loss.svg)
 
