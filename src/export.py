@@ -1,7 +1,11 @@
+import os
+
 import onnx
 import torch
 from model import FaceLandmark
 import onnxoptimizer
+
+os.makedirs('models', exist_ok=True)
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 torch.set_default_device(device)
